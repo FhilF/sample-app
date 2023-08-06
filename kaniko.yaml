@@ -8,7 +8,7 @@ spec:
     image: gcr.io/kaniko-project/executor:latest
     args: [
             "--dockerfile=Dockerfile",
-            "--context=git://github.com/fhilf/sample-app/server/#refs/heads/main",
+            "--context=git://github.com/fhilf/sample-app",
             "--destination=fhilf/sample-server:1.0.0"] 
     volumeMounts:
       - name: kaniko-secret
