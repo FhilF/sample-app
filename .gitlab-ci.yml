@@ -1,0 +1,13 @@
+stages:
+  - build
+
+run_build:
+  stage: build
+  image: gcr.io/kaniko-project/executor:latest
+  script:
+    - >-
+      /kaniko/executor
+      --context "${CI_PROJECT_DIR}"
+      --dockerfile "Dockerfile"
+      --destination "fhilf/sample-server:1.0.0"
+
